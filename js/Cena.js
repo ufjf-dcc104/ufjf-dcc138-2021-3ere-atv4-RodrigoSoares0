@@ -7,6 +7,7 @@ export default class Cena
         this.sprites = [];
 
     }
+    
     desenhar()
     {
         this.ctx.fillStyle = "gray";
@@ -18,8 +19,17 @@ export default class Cena
             sprite.desenhar(this.ctx);
         }
     }
+    
     adicionar(sprite)
     {
         this.sprites.push(sprite);
+    }
+
+    passo(dt)
+    {
+        for(const sprite of this.sprites)
+        {
+            sprite.passo(dt);
+        }
     }
 }

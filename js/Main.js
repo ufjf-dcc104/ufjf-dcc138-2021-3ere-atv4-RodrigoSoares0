@@ -1,8 +1,8 @@
-import AssetsManager from "./AssetsManager.js";
+import AssetManager from "./AssetManager.js";
 import Cena from "./Cena.js";
 import Sprite from "./Sprites.js";
 
-const assets = new AssetsManager();
+const assets = new AssetManager();
 
 assets.carregaImagem("garota", "assets/garota.png"); 
 assets.carregaImagem("esqueleto", "assets/skelly.png"); 

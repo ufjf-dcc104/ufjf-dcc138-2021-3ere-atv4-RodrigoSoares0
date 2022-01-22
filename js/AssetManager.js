@@ -1,4 +1,4 @@
-export default class AssetsManager
+export default class AssetManager
 {
     construtor()
     {

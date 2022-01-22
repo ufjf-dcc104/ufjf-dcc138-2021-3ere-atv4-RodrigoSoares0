@@ -17,12 +17,15 @@ export default class Cena
         this.ctx.fillStyle = "gray";
         this.ctx.fillRect(0,0, this.canvas.width, this.canvas.height);
 
-        for(let s = 0; s<this.sprites.length; s++)
-        {
-            const sprite = this.sprites[s];
-            sprite.desenhar(this.ctx);
-        }
+        if(this.assets.acabou())
+            {
 
+                for(let s = 0; s<this.sprites.length; s++)
+                {
+                    const sprite = this.sprites[s];
+                    sprite.desenhar(this.ctx);
+                }
+            }
         this.ctx.fillStyle = "yellow";
         this.ctx.fillText(this.assets?.progresso(), 10, 20);
     }
@@ -35,9 +38,12 @@ export default class Cena
 
     passo(dt)
     {
-        for(const sprite of this.sprites)
+        if(this.assets.acabou())
         {
-            sprite.passo(dt);
+            for(const sprite of this.sprites)
+            {
+                sprite.passo(dt);
+            }
         }
     }
 

@@ -1,5 +1,6 @@
 import AssetManager from "./AssetManager.js";
 import Cena from "./Cena.js";
+import Mixer from "./Mixer.js";
 import Sprite from "./Sprites.js";
 
 const assets = new AssetManager();
@@ -10,6 +11,7 @@ assets.carregaImagem("orc", "assets/orc.png");
 assets.carregaAudio("moeda", "assets/coin.wav"); 
 assets.carregaAudio("boom", "assets/boom.wav"); 
 
+const mixer = new Mixer(10);
 
 const canvas = document.querySelector("canvas");
 
@@ -34,10 +36,10 @@ document.addEventListener("keydown", (e)=>{switch(e.key)
             cena1.parar();
             break;
         case "c":
-            assets.audio("moeda").play();
+            mixer.play(assets.audio("moeda"));
             break;
         case "b":
-            assets.audio("boom").play();
+            mixer.play(assets.audio("boom"));
             break;
     }
 });

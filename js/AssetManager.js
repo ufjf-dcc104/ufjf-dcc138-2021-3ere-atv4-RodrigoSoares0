@@ -10,7 +10,7 @@ export default class AssetManager
     carregaImagem(chave, source)
     {
         const img1 = new Image(); 
-        img1.src=source;
+        img1.src = source;
         this.imagens.set(chave, img1);
     }
 

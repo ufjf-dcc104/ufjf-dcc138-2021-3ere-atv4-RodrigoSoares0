@@ -36,5 +36,4 @@ document.addEventListener("keydown", (e)=>{switch(e.key)
             assets.audio("moeda").play();
             break;
     }
-}
-})
+});

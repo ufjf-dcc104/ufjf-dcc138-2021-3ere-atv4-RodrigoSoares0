@@ -31,27 +31,24 @@ export default class Mapa
                 {
                     case 1:
                         ctx.fillStyle = "gray";
-                        ctx.fillRect(c*this.SIZE, l*this.SIZE, this.SIZE, this.SIZE);
                         ctx.lineWidth = 1;
                         ctx.strokeStyle = "black";
-                        ctx.strokeStyle(c*this.SIZE, l*this.SIZE, this.SIZE, this.SIZE);
                         break;
                     case 2:
                         ctx.fillStyle = "red";
-                        ctx.fillRect(c*this.SIZE, l*this.SIZE, this.SIZE, this.SIZE);
                         ctx.lineWidth = 1;
                         ctx.strokeStyle = "orange";
-                        ctx.strokeStyle(c*this.SIZE, l*this.SIZE, this.SIZE, this.SIZE);
                         break;
                     default:
                         ctx.fillStyle = "black";
-                        ctx.fillRect(c*this.SIZE, l*this.SIZE, this.SIZE, this.SIZE);
                         ctx.lineWidth = 1;
                         ctx.strokeStyle = "gray";
-                        ctx.strokeStyle(c*this.SIZE, l*this.SIZE, this.SIZE, this.SIZE);
                         break;
 
                 }
+                ctx.fillRect(c*this.SIZE, l*this.SIZE, this.SIZE, this.SIZE);
+                ctx.strokeStyle(c*this.SIZE, l*this.SIZE, this.SIZE, this.SIZE);
+
             }
         }
     }

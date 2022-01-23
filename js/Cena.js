@@ -27,6 +27,7 @@ export default class Cena
                 {
                     const sprite = this.sprites[s];
                     sprite.desenhar(this.ctx);
+                    sprite.aplicaRestricoes();
                 }
             }
         this.ctx.fillStyle = "yellow";
